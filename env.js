@@ -1,5 +1,8 @@
 const requiredEnv = [
   "NODE_ENV",
+  "RABBITMQ_URL",
+  "REDIS_HOST",
+  "REDIS_PORT",
 ];
 
 
