@@ -24,3 +24,19 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+
+  # Descomente a seção abaixo para dockerizar também a aplicação Node.js junto com os serviços
+  # app:
+  #   build:
+  #     context: .                # Diretório de build (raiz do projeto)
+  #     dockerfile: Dockerfile    # Dockerfile a ser usado
+  #   container_name: template_app # Nome do container
+  #   restart: always            # Sempre reiniciar em caso de falha
+  #   ports:
+  #     - "4000:4000"            # Mapeia a porta 4000 do host para o container
+  #   depends_on:
+  #     redis:
+  #       condition: service_started   # Só inicia após o Redis estar rodando
+  #     rabbitmq:
+  #       condition: service_healthy  # Só inicia após o RabbitMQ estar saudável
+  #   command: ["node", "bin/www"] # Comando de inicialização da aplicação
