@@ -1,0 +1,21 @@
+openapi: 3.0.0
+info:
+  title: API de Teste
+  version: 1.0.0
+  description: Exemplo simples para testar o Swagger
+paths:
+  /:
+    get:
+      summary: Aplicação no ar
+      description: Retorna um css para mostrar que a aplicação está funcionando
+      responses:
+        '200':
+          description: Sucesso
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Aplicação está funcionando"
