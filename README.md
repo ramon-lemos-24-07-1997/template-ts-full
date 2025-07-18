@@ -20,11 +20,23 @@ Projeto base Node.js com integração a Redis e RabbitMQ, pronto para uso com Do
 ### Exemplo de .env
 ```env
 NODE_ENV=dev
-RABBITMQ_URL=amqp://user:password@rabbitmq:5672/
+
+# RabbitMQ
+RABBITMQ_URL=amqp://user:password@rabbitmq:5672/  
+
+# Redis
+# Use REDIS_HOST=localhost se rodar o app fora do Docker Compose
+# Use REDIS_HOST=redis se rodar toda a stack pelo Docker Compose
 REDIS_HOST=redis
 REDIS_PORT=6379
+
+# Postgres (ajuste conforme seu ambiente)
 DATABASE_URL="postgresql://user:password@localhost:5432/seubanco?schema=public"
 ```
+
+> **Dica:**
+> - Se rodar o app localmente (fora do Docker), use `REDIS_HOST=localhost`.
+> - Se rodar tudo pelo Docker Compose, use `REDIS_HOST=redis`.
 
 ### Acesso aos serviços
 - App: http://localhost:4000
