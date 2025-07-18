@@ -1,4 +1,4 @@
-const logger = require('../utils/logger');
+const logger = require('../../utils/logger/logger');
 const prisma = require("../../prisma/prisma");
 
 // Conexão com o banco de dados usando Prisma

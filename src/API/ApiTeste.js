@@ -1,5 +1,5 @@
 const axios = require('axios');
-const ErrorResponse = require('../utils/ErrorHandle');
+const ErrorResponse = require('../utils/error/ErrorHandle');
 
 const BASE_URL = process.env.TESTE_URL || 'http://localhost:3000/api/teste';
 

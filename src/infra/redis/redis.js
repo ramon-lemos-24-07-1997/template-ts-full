@@ -1,5 +1,5 @@
 const redis = require('redis');
-const logger = require('../../utils/logger/logger');
+const logger = require("../../utils/logger/logger");
 
 const redisInstance = redis.createClient({
   url: process.env.REDIS_URL || `redis://${process.env.REDIS_HOST}:${process.env.REDIS_PORT}`

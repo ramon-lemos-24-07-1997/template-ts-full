@@ -3,7 +3,7 @@ var router = express.Router();
 const path = require("path");
 
 router.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../public/views/status.html"));
+  res.sendFile(path.join(process.cwd(), "public", "views", "status.html"));
 });
 
 

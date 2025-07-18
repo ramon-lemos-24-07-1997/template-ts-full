@@ -2,22 +2,23 @@
 require('dotenv').config()
 
 // Importa o cliente RabbitMQ, se não for necessário, você pode remover esta linha
-require('../infra/rabbitmq/rabbit');
+require('../src/infra/rabbitmq/rabbit');
 
 // Importa o cliente Redis, se não for necessário, você pode remover esta linha
-require('../infra/redis/redis'); 
+require('../src/infra/redis/redis');
 
 
 // Para depuração, você pode descomentar a linha abaixo para ver os logs do servidor
 // try {
-//   var app = require('../app');
+//   var app = require('../src/app');
+//   console.log('App carregado com sucesso');
 // } catch (error) {
 //   console.log('Erro ao carregar o app:', error);
 // }
 /**
  * Module dependencies.
  */
-const app = require("../app");
+const app = require("../src/app");
 const debug = require("debug")("backend:server");
 const http = require("http");
 
@@ -36,14 +37,14 @@ const server = http.createServer(app);
 
 // Para depuração, você pode descomentar a linha abaixo para ver os logs do servidor
 // try {
-//   const { startSocketServer } = require("../infra/socket/socket");
+//   const { startSocketServer } = require("../src/infra/socket/socket");
 //   startSocketServer(server);
 // } catch (error) {
 //   console.log('Erro ao carregar socket:', error);
 // }
 
 // Importa e inicia o servidor Socket.IO
-const { startSocketServer } = require("../infra/socket/socket");
+const { startSocketServer } = require("../src/infra/socket/socket");
 startSocketServer(server);
 
 /**

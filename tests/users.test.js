@@ -1,6 +1,6 @@
 const request = require('supertest');
 require('dotenv').config();
-const app = require('../app');
+const app = require('../src/app');
 
 describe('Cenários de testes para /users', () => {
   it('POST /users com dados válidos deve retornar 200', async () => {

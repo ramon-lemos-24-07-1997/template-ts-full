@@ -1,5 +1,5 @@
 // Valida variáveis de ambiente
-require('./env.js');
+require('../env.js');
 
 // Importa dependências principais
 var express = require('express'); // Framework web
@@ -18,7 +18,7 @@ var app = express();
 app.use(helmet());
 
 // Configura e ativa a documentação Swagger
-require('./swagger')(app);
+require('./swagger.js')(app);
 
 // Configuração de limite de requisições por IP
 const rateLimiter = new RateLimiterMemory({
