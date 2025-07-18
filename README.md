@@ -14,7 +14,7 @@ Projeto base Node.js com integração a Redis e RabbitMQ, pronto para uso com Do
 2. Configure o arquivo `.env` conforme exemplo abaixo
 3. Execute:
    ```sh
-   docker-compose up --build
+   docker-compose up --build -d
    ```
 
 ### Exemplo de .env

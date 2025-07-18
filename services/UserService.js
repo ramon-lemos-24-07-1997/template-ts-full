@@ -9,6 +9,4 @@ const test = async (data) => {
 };
 
 
-export { 
-    test,
-};
+module.exports = { test };
