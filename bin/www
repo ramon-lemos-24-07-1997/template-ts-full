@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 require('dotenv').config()
 
+// Importa o cliente RabbitMQ, se não for necessário, você pode remover esta linha
 require('../infra/rabbitmq/rabbit');
-try {
-  require('../infra/redis/redis'); 
-} catch (error) {
-  console.error('Erro ao carregar o socket:', error);
-}
+
+// Importa o cliente Redis, se não for necessário, você pode remover esta linha
+require('../infra/redis/redis'); 
+
 
 // Para depuração, você pode descomentar a linha abaixo para ver os logs do servidor
 // try {
