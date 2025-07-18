@@ -1,5 +1,5 @@
 // Valida variáveis de ambiente
-require('../env.js');
+require('./env.js');
 
 // Importa dependências principais
 var express = require('express'); // Framework web
