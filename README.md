@@ -44,7 +44,7 @@ DATABASE_URL="postgresql://user:password@localhost:5432/seubanco?schema=public"
 
 
 ### Estrutura principal
-- `app.js`, `bin/www`: Inicialização da aplicação
+- `src/app.js`, `bin/www`: Inicialização da aplicação
 - `infra/database/`: Configuração do banco
 - `infra/rabbitmq/`: Configuração do RabbitMQ
 - `infra/socket/`: Implementação de WebSocket, incluindo autenticação, handlers, emits e listeners
