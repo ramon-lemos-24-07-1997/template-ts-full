@@ -1,9 +1,8 @@
 node_modules
 npm-debug.log
+.env
 .git
 dist
 coverage
 *.tsbuildinfo
-Dockerfile
-docker-compose.yml
 database/*.sqlite
