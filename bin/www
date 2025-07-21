@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 require('dotenv').config()
-
+// Importa o módulo de shutdown gracioso
+const gracefulShutdown = require('http-graceful-shutdown');
 // Importa o cliente RabbitMQ, se não for necessário, você pode remover esta linha
 require('../src/infra/rabbitmq/rabbit');
 
@@ -34,7 +35,7 @@ app.set("port", port);
  */
 
 const server = http.createServer(app);
-
+gracefulShutdown(server);
 // Para depuração, você pode descomentar a linha abaixo para ver os logs do servidor
 // try {
 //   const { startSocketServer } = require("../src/infra/socket/socket");
