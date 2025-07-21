@@ -1,5 +1,5 @@
 {
-  "name": "template-ts-full",
+  "name": "template-js-full",
   "version": "1.0.0",
   "description": "Projeto backend Node.js com BullMQ, Redis, Swagger e estrutura organizada.",
   "main": "app.js",
